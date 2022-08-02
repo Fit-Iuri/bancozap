@@ -1,0 +1,33 @@
+name: Clone Private Repository Workflow
+
+on:
+  push:
+    branches:
+      - "whitelabel/BancoZap"
+    paths-ignore:
+      - ".github/**"
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Clone Fit-Iuri/github-actions-training
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: "Fit-Iuri"
+          repository: "github-actions-training"
+          access-token: ${{ secrets.API_TOKEN_GITHUB }}
+
+      - name: Access cloned repository content
+        run: |
+          echo "ROOT"
+          ls -la
+          echo "CLONED REPO"
+          cd github-actions-training
+          git checkout BancoZap
+          ls -la
