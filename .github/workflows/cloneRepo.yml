@@ -3,7 +3,7 @@ name: Clone Private Repository Workflow
 on:
   push:
     branches:
-      - "whitelabel/BancoZap"
+      - "main"
     paths-ignore:
       - ".github/**"
 
