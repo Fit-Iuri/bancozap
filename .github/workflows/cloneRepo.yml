@@ -14,6 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          name: Fit-Iuri/github-actions-training
+          repository: Fit-Iuri/github-actions-training
           ref: refs/heads/BancoZap
+          token: ${{ secrets.API_TOKEN_GITHUB }}
           fetch-depth: 0
