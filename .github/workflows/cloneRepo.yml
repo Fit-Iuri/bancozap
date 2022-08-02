@@ -29,5 +29,5 @@ jobs:
           ls -la
           echo "CLONED REPO"
           cd github-actions-training
-          git checkout BancoZap
+          git checkout ${{ github.head_ref || github.ref_name }} 
           ls -la
