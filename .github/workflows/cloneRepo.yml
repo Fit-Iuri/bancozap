@@ -15,6 +15,6 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: Fit-Iuri/github-actions-training
-          ref: refs/heads/BancoZap
+          ref: refs/heads/whitelabel/BancoZap
           token: ${{ secrets.API_TOKEN_GITHUB }}
           fetch-depth: 0
