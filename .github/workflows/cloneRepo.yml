@@ -3,7 +3,7 @@ name: Clone Private Repository Workflow
 on:
   push:
     branches:
-      - main"
+      - "main"
     paths-ignore:
       - ".github/**"
 
